@@ -1,4 +1,3 @@
-
 class PatchData
   def self.patch(req)
     path, id = Find.find_path_and_id(req.fullpath)

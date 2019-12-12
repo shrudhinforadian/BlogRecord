@@ -1,3 +1,4 @@
+
 class GetData
   require_relative './find_path'
   def self.get(req)
