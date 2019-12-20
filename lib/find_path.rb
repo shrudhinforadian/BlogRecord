@@ -1,12 +1,9 @@
 
 class Find
   def self.find_path_and_id(path_info)
-    # path_info = path_info.chomp('/') if path_info[-1] == '/'
-    p path_info
     case path_info
     when %r{posts/(\d+)$}
       id = path_info.scan(%r{posts/(\d+)$})
-      # p 'posts/id', id[0][0]
       return 'posts/id', id[0][0]
     when /users$/
       return 'users', nil
@@ -20,11 +17,8 @@ class Find
       return 'comments?postid', id[0][0]
     when /posts(\?)userid=(\d+)$/
       id = path_info.scan(/posts\?userid=(\d+)$/)
-      # p 'hi'
-      # p id[0][0]
       return 'posts?userid', id[0][0]
     when /posts$/
-      # p 'posts', nil
       return 'posts', nil
     when %r{users/(\d+)$}
       id = path_info.scan(%r{users/(\d+)$})
