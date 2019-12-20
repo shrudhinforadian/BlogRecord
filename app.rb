@@ -25,7 +25,8 @@ class Main
     when 'DELETE'
       DeleteData.delete(req)
     else
-      [404, { 'Content-Type' => 'text/html' }, ["<h1 align='center'>Error 404 not found </h1>"]]
+      [404, { 'Content-Type' => 'text/html' },
+        ["<h1 align='center'>Error 404 not found </h1>"]]
     end
   end
 end
